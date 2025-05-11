@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our medical waste management system
+				medical: {
+					100: '#e6f7f5',
+					200: '#b3e6e0',
+					300: '#66ccbe',
+					400: '#2eb3a2',
+					500: '#1ea896', // Primary teal
+					600: '#0e7c6b',
+					700: '#064f44',
+				},
+				waste: {
+					safe: '#10b981', // Safe waste - green
+					caution: '#f59e0b', // Caution waste - amber
+					hazard: '#ef4444', // Hazardous waste - red
 				}
 			},
 			borderRadius: {
@@ -84,11 +100,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gentle': 'pulse-gentle 3s ease-in-out infinite',
 			}
 		}
 	},
