@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
@@ -11,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
-import { User, Building2, CreditCard, Bell, Mail, Phone } from "lucide-react";
+import { User, Building2, CreditCard, Bell, Mail, Phone, CalendarIcon } from "lucide-react";
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth();
@@ -358,7 +357,7 @@ const Profile = () => {
                       <h3 className="text-lg font-medium mb-4">Notification Types</h3>
                       <div className="space-y-4">
                         {[
-                          { title: "Collection Reminders", description: "Receive reminders about upcoming waste collections", icon: <Calendar className="h-4 w-4" /> },
+                          { title: "Collection Reminders", description: "Receive reminders about upcoming waste collections", icon: <CalendarIcon className="h-4 w-4" /> },
                           { title: "Payment Confirmations", description: "Get notified when payments are processed", icon: <CreditCard className="h-4 w-4" /> },
                           { title: "Account Updates", description: "Important updates regarding your account", icon: <User className="h-4 w-4" /> },
                           { title: "Compliance Alerts", description: "Stay informed about regulatory changes", icon: <Bell className="h-4 w-4" /> },

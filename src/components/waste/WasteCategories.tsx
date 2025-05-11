@@ -15,9 +15,9 @@ import {
   Syringe,
   FileText,
   AlertTriangle,
-  Flask,
-  VirusIcon,
-  RadioIcon,
+  Beaker,
+  Bug,
+  Radio,
 } from "lucide-react";
 
 interface WasteCategoryProps {
@@ -101,7 +101,7 @@ const WasteCategories = () => {
     {
       title: "Infectious Waste",
       description: "Materials contaminated with blood and other bodily fluids",
-      icon: <VirusIcon className="h-5 w-5" />,
+      icon: <Bug className="h-5 w-5" />,
       color: "caution",
       examples: ["Soiled bandages", "Culture dishes", "Blood bags", "Swabs"],
       guidelines: "Must be placed in leak-proof, biohazard-labeled red bags and containers. Requires treatment before disposal."
@@ -125,7 +125,7 @@ const WasteCategories = () => {
     {
       title: "Chemical Waste",
       description: "Laboratory chemicals and reagents",
-      icon: <Flask className="h-5 w-5" />,
+      icon: <Beaker className="h-5 w-5" />,
       color: "hazard",
       examples: ["Solvents", "Disinfectants", "Reagents", "Acids"],
       guidelines: "Must be collected in compatible containers with proper labeling. Segregate incompatible chemicals."
@@ -133,7 +133,7 @@ const WasteCategories = () => {
     {
       title: "Radioactive Waste",
       description: "Materials contaminated with radioactive substances",
-      icon: <RadioIcon className="h-5 w-5" />,
+      icon: <Radio className="h-5 w-5" />,
       color: "hazard",
       examples: ["Isotopes", "Contaminated tools", "Lab coats", "Gloves"],
       guidelines: "Requires specialized containment, labeling, and documentation. Must be handled by trained personnel only."
